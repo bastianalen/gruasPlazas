@@ -1,4 +1,3 @@
-    <footer>
         <!-- Sección de contacto -->
         <div class="container-footer">
             <h3>Contacto</h3>
@@ -26,4 +25,3 @@
                 <li><a href="#">Política de privacidad</a></li>
             </ul>
         </div>
-    </footer>

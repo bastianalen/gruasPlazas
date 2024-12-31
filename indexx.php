@@ -16,15 +16,15 @@
         <!-- Articulos y noticias -->
         <article class="article-inicio">
             <!-- Noticias antiguas -->
-            <section class="container-seccion-camiones flex-center-none">
-                <div class="container-camiones">
+            <section class="container-seccion-funciones flex-center-none">
+                <div class="container-funciones">
                     <!-- Estructura de noticias por categoría -->
-                    <div class="muestra-camiones">
+                    <div class="muestra-funciones">
                         <h2>Detalle de Funcionalidades</h2>
                     </div>
-                    <div class="camiones">
+                    <div class="funciones">
                         <a href="view/camiones/camiones.php" class="enlace-cuadro">
-                            <div class="camiones-especifico">
+                            <div class="funcion">
                                 <figure class="imagen">
                                     <img src="./public/img/Grua_amarilla_1.jpg" alt="Imagen de Felipe Avello">
                                 </figure>
@@ -44,7 +44,7 @@
                         </a>
                         
                         <a href="view/trabajadores/trabajadores.php" class="enlace-cuadro">
-                            <div class="camiones-especifico">
+                            <div class="funcion">
                                 <figure class="imagen">
                                     <img src="./public/img/Trabajador.jpg" alt="Imagen de Romina Sáez">
                                 </figure>
@@ -56,12 +56,13 @@
                                     <ul class="lista-descripcion"> 
                                         <li>Información personal</li>
                                         <li>Trabajos</li>
+                                        <li>Equipo de protección personal</li>
                                     </ul>
                                 </figcaption>
                             </div>
                         </a>
                         <a href="view/clientes/clientes.php" class="enlace-cuadro">
-                            <div class="camiones-especifico">
+                            <div class="funcion">
                                 <figure class="imagen">
                                     <img src="./public/img/Cliente.jpg" alt="Imagen de Yamila Reyna">
                                 </figure>
@@ -78,7 +79,7 @@
                             </div>
                         </a>
                         <a href="view/trabajos/trabajos.php" class="enlace-cuadro">
-                            <div class="camiones-especifico">
+                            <div class="funcion">
                                 <figure class="imagen">
                                     <img src="./public/img/Grua_amarilla_3.jpg" alt="Imagen de Yamila Reyna">
                                 </figure>
@@ -96,7 +97,7 @@
                             </div>
                         </a>
                         <a href="view/finanzas/finanzas.php" class="enlace-cuadro">
-                            <div class="camiones-especifico">
+                            <div class="funcion">
                                 <figure class="imagen">
                                     <img src="./public/img/Finanzas.jpg" alt="Imagen de Yamila Reyna">
                                 </figure>

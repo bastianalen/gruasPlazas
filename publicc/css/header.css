@@ -5,7 +5,7 @@
     padding: 10px 20px;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 1;
 }
 .container-inter-navbar {
     width: 100%;
