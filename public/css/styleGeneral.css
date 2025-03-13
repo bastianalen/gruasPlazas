@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100%;
+    min-height: 100vh;
+    background-color: #ececec;
+
+    font-family: sans-serif; 
+
+}
+
+/* Algo simple para ver la estructura */
+.left-bar { 
+    background: #1f2937; 
+    color: white; 
+    width: 250px; 
+    height: 100vh; 
+    position: fixed; 
+    top: 0; left: 0; 
+    transition: width 0.3s; 
+}
+.left-bar.collapsed { 
+    width: 80px; 
+}
+.menu-item { 
+    padding: 20px; 
+    cursor: pointer; 
+}
+.menu-item:hover { 
+    background-color: #374151; 
+}
+.menu-item.active {
+    background-color: #4b5563;
+  }
+.content { 
+    margin-left: 250px; 
+    padding: 20px; 
+    transition: margin-left 0.3s; 
+}
+.collapsed + .content { 
+    margin-left: 80px; 
+}
+
+
+
+
+.flex-center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-none-center {
+    display: flex;
+    align-items: center;
+}
+
+.flex-center-none {
+    display: flex;
+    justify-content: center;
+}
+
+/* Resaltos con cursor o demas */
+.resalto-alto {
+    padding: 5px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+.resalto-alto:hover {
+    color: #004080;
+    border-bottom: 2px solid #004080;
+}
+.resalto-alto:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 60%; 
+    /* background: linear-gradient(to bottom, #000000, #adadad); */
+    border-radius: 3px;
+}
+
+
+/* Table list */
+.table-responsive {
+    max-width: 100%;
+    margin-bottom: 20px;
+    border-spacing: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: left;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+.table-list {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin-bottom: 10px;
+}
+thead th{
+    background-color: #f5f5f5;
+    padding: 10px;
+    border: 1px solid #c2c2c2;
+}
+
+tbody tr {
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    padding: 5px;
+    &:hover {
+        background-color: #e0e0e0;
+    }
+    td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        vertical-align: middle;
+    }
+    /* Ancho a la primera celda de cada fila */
+    td:first-child {
+        width: 10%;
+    }
+    /* Ancho a la segunda celda de cada fila */
+    td:nth-child(2) {
+        width: 30%;
+    }
+    /* Ancho a la tercera celda de cada fila */
+    td:nth-child(3) {
+        width: 20%;
+    }
+    /* Ancho a la cuarta celda de cada fila */
+    td:nth-child(4) {
+        width: 20%;
+    }
+    /* Ancho a la ultima celda de cada fila */
+    td:last-child {
+        width: 10%;
+    }
+    /* margen y tamañano de <a> a la ultima celda de cada fila */
+    td:last-child .btn-xs {
+        margin-left: 5px;
+        font-size: larger;
+        background: none;
+        border: none;
+    }
+    /* margen y color de <a> delete de la ultima celda de cada fila */
+    td:last-child .btn-delete {
+        margin-left: 5px;
+        color: #dc3545;
+    }
+    /* hover color de <a> delete de la ultima celda de cada fila */
+    td:last-child .btn-delete:hover {
+        color: #8c1a1a;
+    }
+    /* margen y color de <a> edit de la ultima celda de cada fila */
+    td:last-child .btn-edit {
+        margin-left: 5px;
+        color: #ffc107;
+    }
+    /* color de hover de <a> edit de la ultima celda de cada fila */
+    td:last-child .btn-edit:hover {
+        color: #ff851b;
+    }
+}

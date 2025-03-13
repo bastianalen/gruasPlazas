@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header - Navbar */
+.nav {
+    background-color: #e1e1e1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.container-inter-navbar {
+    width: 100%;
+    height: 64px;
+    display: flex;
+}
+.navbar-logo {
+    padding-left: 10px;
+    /* border-radius: 20px; */
+    overflow: hidden;
+    margin-right: 10px;
+}
+.navbar-logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+.navbar-items {
+    max-width: 100%;
+    justify-content: space-between;
+}
+.navbar-menu {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.nav-link {
+    flex: none;
+    height: 60%;
+    margin-right: 15px;
+    border-left: 2px solid #3333335e;
+    box-shadow: -3px 0px 2px rgba(0, 0, 0, 0.2); 
+}
+.nav-link a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos del submenú */
+.submenu {
+    position: relative;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+    padding: 15px;
+    min-width: 300px;
+    z-index: 100;
+}
+
+/* Contenedor de columnas */
+.dropdown-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+/* Columnas individuales */
+.dropdown-column {
+    flex: 1;
+}
+/* Estilos para títulos dentro del dropdown */
+.dropdown-column h4 {
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+    border-bottom: 2px solid #1f1f1f;
+}
+/* Lista de opciones */
+.dropdown-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-column ul li {
+    padding: 5px 0;
+}
+
+.dropdown-column ul li a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+.dropdown-column ul li a:hover {
+    color: #007BFF;
+}
+
+/* Mostrar el submenú al hacer hover */
+.submenu:hover .dropdown {
+    display: block;
+}
+
+/* Fin Header - Navbar */

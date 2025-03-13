@@ -1,0 +1,280 @@
+main {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    gap: 5px;
+    margin: 10px 5%;
+    /* background-color: aqua; */
+}
+
+/* Container vehiculos */
+.enlace-cuadro {
+    text-decoration: none;
+    color: #1f1f1f;
+    height: 100%;
+}
+.container-seccion-vehiculos {
+    grid-column: span 1 / span 1;
+    grid-row-start: 2;
+    padding-top: 10px;
+}
+.container-vehiculos{
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.titulo-botones-vehiculos {
+    padding-left: 5%;
+    display: flex;
+    gap: 15px;
+    height: 100%;
+    align-items: center;
+}
+.btn-accion {
+    text-decoration: none;
+    color: #000;
+    background-color: #74747435;
+    padding: 3px;
+    font-size: small;
+    border-radius: 5px;
+}
+.btn-accion:hover {
+    background-color: #7474747a;
+}
+.btn-actualizar, .btn-eliminar{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: 5px auto;
+}
+
+.vehiculos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+    gap: 20px; /* Espacio entre los elementos */
+    padding: 10px;
+    justify-content: center;
+}
+
+.vehiculos-especifico {
+    background-color: #fefefe;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Ajuste automático de altura */
+}
+
+.vehiculos-especifico:hover {
+    transform: scale(1.05); /* Agranda el cuadro un 5% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Leve sombra */
+}
+.vehiculos-especifico img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.imagen {
+    width: 100%;
+}
+
+.titulo-vehiculos {
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+}
+.descripcion-vehiculos {
+    display: grid;
+    grid-template-rows: auto;
+    padding-left: 10px;
+}
+.lista-descripcion {
+    list-style: circle;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+/* Fin Contenido principal del sitio */
+
+/* Estilo del modal */
+.modal-vehiculos {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 10;
+}
+
+.modal-vehiculos.mostrar {
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+}
+
+.contenido-modal {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    text-align: center;
+    position: relative;
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* Fin estilo modal */
+
+/* Estilo añadir vehiculo */
+.form-agregar-vehiculo{
+    display: flex;
+    padding: 50px;
+    gap: 10px;
+}
+.info-vehiculo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.info-vehiculo input{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.imagen-vehiculo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#vista-previa{
+    border: 1px solid #ccc; 
+    width: 350px; 
+    height: 300px; 
+    margin-bottom: 10px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background-color: #f9f9f9;
+}
+#vista-previa p {
+    color: #888;
+}
+
+/* FIN Estilo añadir vehiculo */
+
+/* Mantenciones - Estados */
+.informacion-mantenciones {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.informacion-mantenciones th,
+.informacion-mantenciones td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.informacion-mantenciones th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Estado Mantencion */
+.Muy-seguro {
+    background-color: #00ff3c;
+}
+
+.Al-dia {
+    background-color: #53b119;
+}
+
+.Proximo-a-la-fecha {
+    background-color: #b3ea33;
+}
+
+.Hoy {
+    background-color: #ffc107;
+}
+
+.Atrasado {
+    background-color: #e87305;
+}
+
+.Muy-atrasado {
+    background-color: #f3460d;
+}
+
+.Extremadamente-atrasado {
+    background-color: #ff0000;
+}
+
+/* Fin Estado Mantencion */
+
+
+.modal-figure {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#modal-imagen {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+/* Clase para ocultar el modal */
+.oculto {
+    display: none;
+}
+/* Fin modal */
+
+
+/* @media para pantallas medianas (por ejemplo, tablets) */
+@media (max-width: 1000px) {
+
+    .article-inicio .texto-principal {
+        margin-top: 15px;
+    }
+
+    .article-inicio .texto-principal h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* @media para pantallas pequeñas (por ejemplo, móviles) */
+@media (max-width: 768px) {
+    .recientes {
+        flex-direction: column;
+        
+    }
+    
+    .imagen-principal {
+        width: 100%;
+        margin: 0;
+    }
+
+    .article-inicio .texto-principal h1 {
+        font-size: 1.8rem;
+    }
+}
